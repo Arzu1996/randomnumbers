@@ -6,6 +6,7 @@ import java.util.Random;
 public class MinimalPair {
     public static void main(String[] args) {
         int sum;
+
         ArrayList<Integer> arr = new ArrayList<>();
         Random rand = new Random();
         int min_inx = -1;
