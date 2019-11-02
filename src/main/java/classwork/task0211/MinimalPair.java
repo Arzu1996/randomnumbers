@@ -1,4 +1,4 @@
-package classwork;
+package classwork.task0211;
 
 import java.util.ArrayList;
 import java.util.Random;
