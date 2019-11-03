@@ -19,13 +19,6 @@ public class Schedule {
         schedule[5][1] = "Do home work;go to University.";
         schedule[6][0] = "Saturday";
         schedule[6][1] = "Do home work.";
-/*
-        for (int i = 0; i < 7; i++) {
-            for (int j = 0; j < 2; j++) {
-                System.out.print(" "+schedule[i][j]);
-            }System.out.println();
-        }
-*/
         Scanner input = new Scanner(System.in);
         while (true) {
             System.out.println("Please, input the day of the week:");
@@ -33,25 +26,25 @@ public class Schedule {
 
             switch (selectedDay) {
                 case "SUNDAY":
-                    System.out.printf("Your tasks for Sunday: %s\n", schedule[0][1]);
+                    System.out.printf("Your tasks for %s: %s\n", schedule[0][0], schedule[0][1]);
                     continue;
                 case "MONDAY":
-                    System.out.printf("Your tasks for Monday: %s\n", schedule[1][1]);
+                    System.out.printf("Your tasks for %s: %s\n", schedule[1][0], schedule[1][1]);
                     continue;
                 case "TUESDAY":
-                    System.out.printf("Your tasks for Tuesday: %s\n", schedule[2][1]);
+                    System.out.printf("Your tasks for %s: %s\n", schedule[2][0], schedule[2][1]);
                     continue;
                 case "WEDNESDAY":
-                    System.out.printf("Your tasks for Wednesday: %s\n", schedule[3][1]);
+                    System.out.printf("Your tasks for %s: %s\n", schedule[3][0], schedule[3][1]);
                     continue;
                 case "THURSDAY":
-                    System.out.printf("Your tasks for Thursday: %s\n", schedule[4][1]);
+                    System.out.printf("Your tasks for %s: %s\n", schedule[4][0], schedule[4][1]);
                     continue;
                 case "FRIDAY":
-                    System.out.printf("Your tasks for Friday: %s\n", schedule[5][1]);
+                    System.out.printf("Your tasks for %s: %s\n", schedule[5][0], schedule[5][1]);
                     continue;
                 case "SATURDAY":
-                    System.out.printf("Your tasks for Saturday: %s\n", schedule[6][1]);
+                    System.out.printf("Your tasks for %s: %s\n", schedule[6][0], schedule[6][1]);
                     continue;
                 case "EXIT":
                     break;

@@ -1,14 +1,12 @@
 package homework.hw2;
 
-import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
-public class HomeWork2 {
+public class ShootingSquare {
 
     public static void main(String[] args) {
         char[][] area = new char[5][5];
-
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
                 area[i][j] = '-';
@@ -18,7 +16,6 @@ public class HomeWork2 {
         int row = random.nextInt(5);
         int column = random.nextInt(5);
         System.out.println("All set. Get ready to rumble!");
-
         Scanner input = new Scanner(System.in);
         System.out.println("Enter row number (1-5):");
         while (true) {
@@ -36,9 +33,8 @@ public class HomeWork2 {
                     break;
                 }
             }
-
             System.out.println("Enter column number (1-5):");
-            int selectedColumn ;
+            int selectedColumn;
             while (true) {
                 if (!input.hasNextInt()) {
                     System.out.println("The input is not an integer");
@@ -53,7 +49,6 @@ public class HomeWork2 {
                     break;
                 }
             }
-
             if (row == selectedRow - 1 && column == selectedColumn - 1) {
                 System.out.println("You have won!");
                 area[row][column] = 'X';
@@ -72,11 +67,9 @@ public class HomeWork2 {
                         System.out.print(area[i][j]);
                     }
                     System.out.println();
-
                 }
                 System.out.println("Enter row number (1-5):");
             }
-
         }
     }
 }
