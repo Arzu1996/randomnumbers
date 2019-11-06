@@ -19,7 +19,7 @@ public class Human {
         this.year = year;
     }
 
-    public Human(String name, String surname, int year, Human mother, Human father) {
+    Human(String name, String surname, int year, Human mother, Human father) {
         this.name = name;
         this.surname = surname;
         this.year = year;
@@ -68,6 +68,7 @@ public class Human {
                 ", pet=" + pet +
                 '}';
     }
+
 }
 
 

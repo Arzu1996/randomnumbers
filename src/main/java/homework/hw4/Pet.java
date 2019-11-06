@@ -47,7 +47,7 @@ public class Pet {
     @Override
     public String toString() {
         return species +
-                ", nickname='" + nickname + '\'' +
+                " { nickname='" + nickname + '\'' +
                 ", age=" + age +
                 ", trickLevel=" + trickLevel +
                 ", habits=" + Arrays.toString(habits) +
