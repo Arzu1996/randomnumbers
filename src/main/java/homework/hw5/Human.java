@@ -1,6 +1,8 @@
 package homework.hw5;
 
 
+import java.util.Objects;
+
 public class Human {
 
     private String name;
@@ -71,6 +73,24 @@ public class Human {
         this.iq = iq;
         this.pet=pet;
         this.family = family;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Human)) return false;
+        Human human = (Human) o;
+        return year == human.year &&
+                iq == human.iq &&
+                Objects.equals(name, human.name) &&
+                Objects.equals(surname, human.surname) &&
+                Objects.equals(pet, human.pet) &&
+                Objects.equals(family, human.family);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, surname, year, iq, pet, family);
     }
 
     @Override
