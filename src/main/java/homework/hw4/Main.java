@@ -24,5 +24,7 @@ public class Main {
         child.describePet();
         father2.describePet();
         child2.greetPet();
+        System.out.println(child);
+        System.out.println(child2);
     }
 }
