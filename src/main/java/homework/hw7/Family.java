@@ -1,5 +1,4 @@
-package homework.hw5;
-
+package homework.hw7;
 
 import java.util.Arrays;
 import java.util.Objects;
@@ -66,11 +65,17 @@ public class Family {
             return false;
         }
         Human[] copy = new Human[children.length - 1];
-        for (int i = 0; i < children.length; i++) {
-            if (i == index) {
-                System.arraycopy(children, 0, copy, 0, i);
-                System.arraycopy(children, i + 1, copy, i, children.length - i - 1);
-
+        if((index < 0) || (index > (children.length - 1))){
+            System.out.println("Wrong index");
+            return false;
+        }
+        else {
+            for (int i = 0; i < children.length; i++) {
+                if (i == index) {
+                    System.arraycopy(children, 0, copy, 0, i);
+                    System.arraycopy(children, i + 1, copy, i, children.length - i - 1);
+                    System.out.println(children[index].getName()+" "+"got removed");
+                }
             }
         }
         children = copy;
@@ -93,5 +98,10 @@ public class Family {
     @Override
     public int hashCode() {
         return Objects.hash(mother, father);
+    }
+
+    @Override
+    protected void finalize() {
+        System.out.println("Removal of object");
     }
 }

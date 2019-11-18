@@ -1,17 +1,17 @@
-package homework.hw5;
+package homework.hw6;
 
 
 import java.util.Arrays;
 import java.util.Objects;
 
 public class Pet {
-    private String species;
+    private Species species;
     private String nickname;
     private int age;
     private int trickLevel;
     private String[] habits;
 
-    Pet(String species, String nickname, int age, int trickLevel, String[] habits) {
+    Pet(Species species, String nickname, int age, int trickLevel, String[] habits) {
         this.species = species;
         this.nickname = nickname;
         this.age = age;
@@ -59,6 +59,10 @@ public class Pet {
                 ", trickLevel=" + trickLevel +
                 ", habits=" + Arrays.toString(habits) +
                 '}';
+    }
+    @Override
+    protected void finalize() {
+        System.out.println("Removal of object");
     }
 }
 
