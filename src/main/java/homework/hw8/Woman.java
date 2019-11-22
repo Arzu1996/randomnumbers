@@ -10,12 +10,12 @@ final class Woman extends Human {
         super(name, surname, year, iq, family);
     }
 
-    Woman(String name, String surname, int year, int iq, Pet pet, Map<String,String> schedule) {
-        super(name, surname, year, iq, pet, schedule);
+    Woman(String name, String surname, int year, int iq, Map<String,String> schedule) {
+        super(name, surname, year, iq, schedule);
     }
 
-    Woman(String name, String surname, int year, int iq, Pet pet, Map<String,String> schedule, Family family) {
-        super(name, surname, year, iq, pet, schedule, family);
+    Woman(String name, String surname, int year, int iq, Map<String,String> schedule, Family family) {
+        super(name, surname, year, iq, schedule, family);
     }
 
     @Override

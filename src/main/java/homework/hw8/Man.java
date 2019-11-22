@@ -11,12 +11,12 @@ public final class Man extends Human {
         super(name, surname, year, iq, family);
     }
 
-    public Man(String name, String surname, int year, int iq, Pet pet, Map<String,String> schedule) {
-        super(name, surname, year, iq, pet, schedule);
+    public Man(String name, String surname, int year, int iq,Map<String,String> schedule) {
+        super(name, surname, year, iq,schedule);
     }
 
-    public Man(String name, String surname, int year, int iq, Pet pet, Map<String,String> schedule, Family family) {
-        super(name, surname, year, iq, pet, schedule, family);
+    public Man(String name, String surname, int year, int iq, Map<String,String> schedule, Family family) {
+        super(name, surname, year, iq,schedule, family);
     }
 
     @Override

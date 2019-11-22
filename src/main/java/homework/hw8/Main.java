@@ -2,6 +2,7 @@ package homework.hw8;
 
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
@@ -19,11 +20,14 @@ public class Main {
 
         Pet pet = new DomesticCat(Species.CAT, "Kitty", 3, 79, Set.of("play", "sleep"));
         Pet pet2 = new Dog(Species.DOG, "Doggy", 4, 48, Set.of("jumping", "walking"));
+        Set<Pet> pets= new HashSet<>();
+        pets.add(pet);
+        pets.add(pet2);
         Family Greys = new Family(
                 new Woman("Sara", "Grey", 1977),
-                new Man("Sam", "Grey", 1974));
-        Human child = new Woman("Selby", "Grey", 1998, 87, pet,schedule,Greys);
-        Human child2 = new Woman("Jane", "Grey", 1988, 72, pet2,schedule);
+                new Man("Sam", "Grey", 1974),pets);
+        Human child = new Woman("Selby", "Grey", 1998, 87, schedule, Greys);
+        Human child2 = new Woman("Jane", "Grey", 1988, 72, schedule);
         Greys.addChild(child2);
         pet2.respond();
         System.out.println(Greys);

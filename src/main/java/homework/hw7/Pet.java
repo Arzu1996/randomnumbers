@@ -32,10 +32,6 @@ abstract class Pet {
 
    abstract void respond();
 
-    void foul() {
-        System.out.println("I need to cover it up");
-
-    }
 
     @Override
     public boolean equals(Object o) {

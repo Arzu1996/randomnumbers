@@ -6,6 +6,20 @@ public class Family {
     private Human mother;
     private Human father;
     private ArrayList<Human> children;
+    private Pet pet;
+    private Set<Pet> pets= new HashSet<>();
+
+
+    public Family(Human mother, Human father) {
+        this.mother = mother;
+        this.father = father;
+    }
+
+    public Family(Human mother, Human father, Set<Pet> pets) {
+        this.mother = mother;
+        this.father = father;
+        this.pets = pets;
+    }
 
     public Human getMother() {
         return mother;
@@ -23,31 +37,28 @@ public class Family {
         this.father = father;
     }
 
-    public List<Human>  getChildren() {
+    public ArrayList<Human> getChildren() {
         return children;
     }
 
-    public void setChildren(ArrayList<Human>  children) {
-        this.children = children;
-    }
-    Family(Human mother, Human father) {
-        this.mother = mother;
-        this.father = father;
-    }
-
-    public Family(Human mother, Human father,ArrayList<Human>  children) {
-        this.mother = mother;
-        this.father = father;
+    public void setChildren(ArrayList<Human> children) {
         this.children = children;
     }
 
-    @Override
-    public String toString() {
-        return "Family{" +
-                "mother=" + mother +
-                ", father=" + father +
-                ", children=" + children +
-                '}';
+    public Pet getPet() {
+        return pet;
+    }
+
+    public void setPet(Pet pet) {
+        this.pet = pet;
+    }
+
+    public Set<Pet> getPets() {
+        return pets;
+    }
+
+    public void setPets(Set<Pet> pets) {
+        this.pets = pets;
     }
 
     void addChild(Human child) {
@@ -67,13 +78,15 @@ public class Family {
         return children.size() + 2;
     }
 
+
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Family)) return false;
-        Family family = (Family) o;
-        return Objects.equals(mother, family.mother) &&
-                Objects.equals(father, family.father);
+    public String toString() {
+        return "Family{" +
+                "mother=" + mother +
+                ", father=" + father +
+                ", children=" + children +
+                ", pets=" + pets +
+                '}';
     }
 
     @Override

@@ -10,7 +10,6 @@ abstract class Human {
     private String surname;
     private int year;
     private int iq;
-    private Pet pet;
     private Map<String,String> schedule;
     private Family family;
 
@@ -28,24 +27,24 @@ abstract class Human {
         this.family = family;
     }
 
-    Human(String name, String surname, int year, int iq, Pet pet,Map<String,String> schedule) {
+    Human(String name, String surname, int year, int iq,Map<String,String> schedule) {
         this.name = name;
         this.surname = surname;
         this.year = year;
         this.iq = iq;
-        this.pet = pet;
         this.schedule = schedule;
     }
-    Human(String name, String surname, int year, int iq, Pet pet,Map<String,String> schedule, Family family) {
+    Human(String name, String surname, int year, int iq,Map<String,String> schedule, Family family) {
         this.name = name;
         this.surname = surname;
         this.year = year;
         this.iq = iq;
-        this.pet = pet;
         this.schedule = schedule;
         this.family = family;
     }
-    abstract void greetPet();
+     void greetPet(){
+         System.out.println("Hello");
+     }
 
     String getName() {
         return name;
@@ -105,13 +104,12 @@ abstract class Human {
                 iq == human.iq &&
                 Objects.equals(name, human.name) &&
                 Objects.equals(surname, human.surname) &&
-                Objects.equals(pet, human.pet) &&
                 Objects.equals(family, human.family);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, surname, year, iq, pet, family);
+        return Objects.hash(name, surname, year, iq,family);
     }
 
     @Override
@@ -121,7 +119,6 @@ abstract class Human {
                 ", surname='" + surname + '\'' +
                 ", year=" + year +
                 ", iq=" + iq +
-                ", pet=" + pet +
                 ", schedule=" + schedule +
                 ", family=" + family +
                 '}';

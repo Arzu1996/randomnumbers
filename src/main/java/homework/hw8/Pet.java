@@ -34,12 +34,6 @@ abstract class Pet {
 
    abstract void respond();
 
-    void foul() {
-        System.out.println("I need to cover it up");
-
-    }
-
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -59,7 +53,7 @@ abstract class Pet {
 
     @Override
     public String toString() {
-        return "Pet{" +
+        return species+"{" +
                 "species=" + species +
                 ", nickname='" + nickname + '\'' +
                 ", age=" + age +
