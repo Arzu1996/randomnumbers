@@ -15,6 +15,12 @@ public class Family {
         this.father = father;
     }
 
+    public Family(Human mother, Human father, ArrayList<Human> children) {
+        this.mother = mother;
+        this.father = father;
+        this.children = children;
+    }
+
     public Family(Human mother, Human father, Set<Pet> pets) {
         this.mother = mother;
         this.father = father;
