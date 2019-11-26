@@ -4,7 +4,7 @@ package homework.hw8;
 import java.util.Map;
 import java.util.Objects;
 
-abstract class Human {
+class Human {
 
     private String name;
     private String surname;
