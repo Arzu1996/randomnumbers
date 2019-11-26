@@ -1,4 +1,4 @@
-package classwork;
+package classwork.oldtasks;
 import java.util.*;
 
 public class Position {

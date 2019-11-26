@@ -1,6 +1,4 @@
-package classwork;
-
-import java.util.Random;
+package classwork.oldtasks;
 
 public class Task1 {
     public String gen_random(int length) {
