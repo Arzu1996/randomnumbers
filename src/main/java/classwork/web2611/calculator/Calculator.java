@@ -1,4 +1,4 @@
-package classwork;
+package classwork.web2611.calculator;
 
 public class Calculator {
     public int add (int a, int b) {
