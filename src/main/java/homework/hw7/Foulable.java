@@ -1,5 +1,5 @@
 package homework.hw7;
 
-public interface Foul {
+public interface Foulable {
     void foul();
 }

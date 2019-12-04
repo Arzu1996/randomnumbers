@@ -1,6 +1,6 @@
 package homework.hw7;
 
-class Dog extends Pet implements Foul {
+class Dog extends Pet implements Foulable {
     Dog(Species species, String nickname, int age, int trickLevel, String[] habits) {
         super(species, nickname, age, trickLevel, habits);
     }

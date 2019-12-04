@@ -2,7 +2,7 @@ package homework.hw8;
 
 import java.util.Set;
 
-public class RoboCat extends Pet implements Foul{
+public class RoboCat extends Pet implements Foulable {
     RoboCat(Species species, String nickname, int age, int trickLevel, Set<String> habits) {
         super(species, nickname, age, trickLevel, habits);
     }

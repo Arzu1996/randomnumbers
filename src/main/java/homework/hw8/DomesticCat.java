@@ -2,7 +2,7 @@ package homework.hw8;
 
 import java.util.Set;
 
-class DomesticCat extends Pet implements Foul{
+class DomesticCat extends Pet implements Foulable {
     DomesticCat(Species species, String nickname, int age, int trickLevel, Set<String> habits) {
         super(species, nickname, age, trickLevel, habits);
     }

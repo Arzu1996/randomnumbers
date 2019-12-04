@@ -1,6 +1,6 @@
 package homework.hw7;
 
-public class RoboCat extends Pet implements Foul{
+public class RoboCat extends Pet implements Foulable {
     RoboCat(Species species, String nickname, int age, int trickLevel, String[] habits) {
         super(species, nickname, age, trickLevel, habits);
     }

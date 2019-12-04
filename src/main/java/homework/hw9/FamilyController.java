@@ -31,11 +31,11 @@ public class FamilyController {
     public void deleteFamilyByIndex(int index) {
         familyService.deleteFamilyByIndex(index);
     }
-    public Family bornChild(String feminine, String masculine, Family family){
-       return familyService.bornChild(feminine,masculine,family);
+    public void bornChild(String feminine, String masculine, Family family){
+        familyService.bornChild(feminine, masculine, family);
     }
-    public Family adoptChild(Human child, Family family) {
-        return familyService.adoptChild(child,family);
+    public void adoptChild(Human child, Family family) {
+        familyService.adoptChild(child, family);
     }
     public void deleteAllChildrenOlderThen(int age){
         familyService.deleteAllChildrenOlderThen(age);

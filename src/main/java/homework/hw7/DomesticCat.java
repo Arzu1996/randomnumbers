@@ -1,6 +1,6 @@
 package homework.hw7;
 
-class DomesticCat extends Pet implements Foul{
+class DomesticCat extends Pet implements Foulable {
     DomesticCat(Species species, String nickname, int age, int trickLevel, String[] habits) {
         super(species, nickname, age, trickLevel, habits);
     }
